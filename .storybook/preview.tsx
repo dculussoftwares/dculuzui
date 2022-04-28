@@ -37,11 +37,11 @@ export const parameters = {
       // STORAGE_KEY does not work in onChange... not sure why
       if (theme) {
         window.localStorage.setItem(
-          'sb-react-daisyui-preview-theme',
+          'sb-react-dculus-daisyui-preview-theme',
           theme.class
         )
       } else {
-        window.localStorage.removeItem('sb-react-daisyui-preview-theme')
+        window.localStorage.removeItem('sb-react-dculus-daisyui-preview-theme')
       }
     },
     list: THEME_PICKER_LIST,

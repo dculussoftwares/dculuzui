@@ -21,7 +21,7 @@ const StoryLayout = ({ children, title, description, source }) => {
     <Theme dataTheme={globalTheme} className="w-full h-screen p-8 bg-base-100">
       <Navbar className="p-0 border-b border-neutral text-base-content">
         <Navbar.Start>
-          <span className="text-lg font-bold">react-daisyui</span>
+          <span className="text-lg font-bold">react-dculus-daisyui</span>
         </Navbar.Start>
       </Navbar>
 
