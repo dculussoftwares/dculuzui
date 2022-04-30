@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react'
 import DfDropDown, { DfDropDownProps } from '.'
 
 const meta: Meta = {
-  title: `/DfDropDown`,
+  title: `Dculus/DfDropDown`,
   component: DfDropDown,
   parameters: {
     controls: { expanded: true },

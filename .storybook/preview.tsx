@@ -28,6 +28,7 @@ export const parameters = {
         'Layout',
         'Navigation',
         'Mockup',
+        'Dculus'
       ],
     },
   },
