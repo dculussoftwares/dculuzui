@@ -1,6 +1,8 @@
-import React, { forwardRef, ReactNode } from 'react'
+import React, { forwardRef, ReactNode, useState } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
+import Select from 'react-select'
+
 
 import {
   IComponentBaseProps,
@@ -32,7 +34,13 @@ const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
         }),
         className,
     )
+    const [selectedOption, setSelectedOption] = useState(null);
 
+    const options = [
+      { value: 'chocolate', label: 'Chocolate' },
+      { value: 'strawberry', label: 'Strawberry' },
+      { value: 'vanilla', label: 'Vanilla' },
+    ];
     return (
       <div
         {...props}
@@ -40,7 +48,11 @@ const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
         className={classes}
         ref={ref}
       >
-        {children}
+        <Select
+        defaultValue={selectedOption}
+        onChange={setSelectedOption}
+        options={options}
+      />
       </div>
     )
   }
