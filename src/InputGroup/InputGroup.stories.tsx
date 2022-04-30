@@ -11,10 +11,24 @@ export default {
 } as Meta
 
 export const Default: Story<InputGroupProps> = (args) => {
+
   return (
     <Form>
-      <Form.Label title="Enter amount" require={true}></Form.Label>
+      <Form.Label title="Enter amount"></Form.Label>
+      <InputGroup {...args}>
+        <span>Price</span>
+        <Input type="text" placeholder="10" bordered />
+        <span>USD</span>
+      </InputGroup>
+    </Form>
+  )
+}
 
+export const WithHintAndRequire: Story<InputGroupProps> = (args) => {
+
+  return (
+    <Form>
+      <Form.Label title="Enter amount" require={true} hint={"some-hint"}></Form.Label>
       <InputGroup {...args}>
         <span>Price</span>
         <Input type="text" placeholder="10" bordered />
