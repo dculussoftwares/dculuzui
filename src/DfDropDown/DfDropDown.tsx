@@ -54,7 +54,7 @@ const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
           <Select
             className='react-select-container' classNamePrefix="react-select"
             defaultValue={selectedOption}
-            onChange={setSelectedOption}
+            // onChange={setSelectedOption}
             options={options}
 
           />
