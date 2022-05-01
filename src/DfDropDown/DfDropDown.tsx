@@ -48,17 +48,17 @@ const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
     const hoverColor = 'hsl(var(--b3))';
     const primaryBorderColor = 'hsl(var(--b3))';
     const customStyles = {
-      option: (provided, state) => ({
+      option: (provided: any, state: any) => ({
         ...provided,
         borderRadius: 2,
         fontSize: 14
       }),
-      input: (provided, state) => ({
+      input: (provided: any, state: any) => ({
         ...provided,
         margin: 0,
       }),
 
-      control: (base, state) => ({
+      control: (base: any, state: any) => ({
         ...base,
 
         fontSize: 14,
@@ -74,21 +74,21 @@ const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
         }
       }),
 
-      valueContainer: base => ({
+      valueContainer: (base: any) => ({
         ...base,
         height: `${targetHeight - 1 - 1}px`,
         padding: '0 8px',
       }),
-      clearIndicator: base => ({
+      clearIndicator: (base: any) => ({
         ...base,
         padding: `${(targetHeight - 20 - 1 - 1) / 2}px`,
       }),
-      dropdownIndicator: base => ({
+      dropdownIndicator: (base: any) => ({
         ...base,
         color: "var(--primary-color-icon)",
         padding: `${(targetHeight - 20 - 1 - 1) / 2}px`,
       }),
-      menu: (provided, state) => ({
+      menu: (provided: any, state: any) => ({
         ...provided,
         borderRadius: 2
       }),
