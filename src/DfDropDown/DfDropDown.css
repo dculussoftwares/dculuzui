@@ -1,65 +1,94 @@
-.dculus__control {
-  color: aqua;
-  background-color: blue;
-  margin: 0.125rem auto;
-  border: 1px solid darkblue;
-}
-
-.filter__menu {
-  margin: 0.125rem auto;
-}
-.filter__option {
-  background-color: white;
-}
-.filter__option--is-focused {
-  background-color: lightblue;
-}
-.filter__group {
-  padding: 0;
-}
-.filter__menu-portal {
-  border: 1px solid darkblue;
-}
-
 .react-select-container {
-  color: aqua;
+  /* color: aqua;
   background-color: blue;
   margin: 0.125rem auto;
-  border: 1px solid darkblue;
+  border: 1px solid darkblue; */
 }
-.react-select__control {
-  color: aqua;
-  background-color: blue;
+.react-select-container .react-select__control {
+  /* color: rgb(38, 255, 0);
+  background-color: rgb(0, 255, 34);
   margin: 0.125rem auto;
-  border: 1px solid darkblue;
+  border: 1px solid rgb(0, 139, 81); */
+  /* @apply border-primary text-primary-content; */
+  --df-dropdown-color: hsl(var(--p));
+  --df-dropdown-text-color: hsl(var(--pc));
+
+  @apply border bg-base-100 rounded-btn;
+  /* border-color: hsla(var(--bc) / 0.2);
+
+  box-shadow: 0px 0px 0px 1px hsla(var(--bc) / 0.2); */
+  border-color: hsla(var(--bc) / 0.2);
+  box-shadow:none
+}
+
+.react-select-container:hover .react-select__control:hover {
+  /* color: rgb(38, 255, 0);
+  background-color: rgb(0, 255, 34);
+  margin: 0.125rem auto;
+  border: 1px solid rgb(0, 139, 81); */
+  /* @apply border-primary text-primary-content; */
+
+  /* @apply border bg-base-100 rounded-btn; */
+  border-color: hsla(var(--bc) / 0.2);
+  box-shadow: 0px 0px 0px 1px hsla(var(--bc) / 0.2);
+
+  /* outline: 2px solid hsla(var(--bc) / 0.2);
+  outline-offset: 2px; */
+}
+
+.react-select__control--is-focused{
+  /* @apply border bg-base-100 rounded-btn; */
+}
+
+.react-select-container:focus .react-select__control:focus {
+  /* color: rgb(38, 255, 0);
+    background-color: rgb(0, 255, 34);
+    margin: 0.125rem auto;
+    border: 1px solid rgb(0, 139, 81); */
+  /* @apply border-primary text-primary-content; */
+  /* @apply border bg-base-300 rounded-btn;
+  outline: 2px solid hsla(var(--bc) / 0.2);
+  outline-offset: 2px; */
 }
 .react-select__value-container {
-  color: aqua;
+  /* color: aqua;
   background-color: blue;
   margin: 0.125rem auto;
-  border: 1px solid darkblue;
+  border: 1px solid darkblue; */
+  /* @apply border-primary bg-primary text-primary-content; */
 }
 .react-select__indicators {
-  color: aqua;
+  /* color: aqua;
   background-color: blue;
   margin: 0.125rem auto;
-  border: 1px solid darkblue;
+  border: 1px solid darkblue; */
+  /* @apply border-primary bg-primary text-primary-content; */
 }
 .react-select__menu {
-  color: aqua;
+  /* color: aqua;
   background-color: blue;
   margin: 0.125rem auto;
-  border: 1px solid darkblue;
+  border: 1px solid darkblue; */
 }
 .react-select__menu-list {
-  color: aqua;
+  /* color: aqua;
   background-color: blue;
   margin: 0.125rem auto;
-  border: 1px solid darkblue;
+  border: 1px solid darkblue; */
 }
 .react-select__option {
-  color: aqua;
+  /* color: aqua;
   background-color: blue;
   margin: 0.125rem auto;
   border: 1px solid darkblue;
+} */
 }
+
+.dum {
+  margin-bottom: 1000px;
+}
+
+/* react-select__control 
+react-select__control--is-focused 
+react-select__control--menu-is-open 
+css-1pahdxg-control */

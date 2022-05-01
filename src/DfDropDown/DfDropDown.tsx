@@ -43,20 +43,22 @@ const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
       { value: 'vanilla', label: 'Vanilla' },
     ];
     return (
-      <div
-        {...props}
-        data-theme={dataTheme}
-        className={classes}
-        ref={ref}
-      >
-       
-        <Select
-          className='react-select-container' classNamePrefix="react-select"
-          defaultValue={selectedOption}
-          onChange={setSelectedOption}
-          options={options}
-       
-        />
+      <div className='dum'>
+        <div
+          {...props}
+          data-theme={dataTheme}
+          className={classes}
+          ref={ref}
+        >
+
+          <Select
+            className='react-select-container' classNamePrefix="react-select"
+            defaultValue={selectedOption}
+            onChange={setSelectedOption}
+            options={options}
+
+          />
+        </div>
       </div>
     )
   }
