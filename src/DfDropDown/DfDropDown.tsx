@@ -66,12 +66,13 @@ const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
         borderRadius: 2,
 
         boxShadow: state.isFocused ? 0 : 0,
-        borderColor: state.isFocused
-          ? focusColor
-          : primaryBorderColor,
+        borderColor: "hsla(var(--bc) / 0.2)",
         '&:hover': {
           borderColor: hoverColor,
-        }
+          outline: "2px solid hsla(var(--bc) / 0.2)"
+        },
+        outline: state.isFocused ? "2px solid hsla(var(--bc) / 0.2)" : "0.5px solid hsla(var(--bc) / 0.2)"
+
       }),
 
       valueContainer: (base: any) => ({
