@@ -5,9 +5,14 @@ import StoryLayout from './story-layout'
 import '../src/styles.css'
 import { DEFAULT_THEME, STORAGE_KEY, THEME_PICKER_LIST } from './theming'
 import { docsTheme } from './theme.cjs'
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
+  viewport: {
+    viewports: INITIAL_VIEWPORTS,
+  },
   previewTabs: {
     'storybook/docs/panel': { hidden: true },
   },

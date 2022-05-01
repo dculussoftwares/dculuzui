@@ -2,19 +2,20 @@ import React, { forwardRef, ReactNode, useState } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 import Select from 'react-select'
+import "./DfDropDown.css"
 
 
 import {
   IComponentBaseProps,
 } from '../types'
 
-export type DfDropDownProps = 
+export type DfDropDownProps =
   & React.HTMLAttributes<HTMLDivElement>
-  & IComponentBaseProps 
+  & IComponentBaseProps
   & {
     disabled?: Boolean
     responsive?: Boolean
-}
+  }
 
 const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
   (
@@ -25,14 +26,14 @@ const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
       className,
       children,
       ...props
-      },
-      ref
+    },
+    ref
   ): JSX.Element => {
     const classes = twMerge(
       clsx({
         responsive,
-        }),
-        className,
+      }),
+      className,
     )
     const [selectedOption, setSelectedOption] = useState(null);
 
@@ -48,11 +49,14 @@ const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
         className={classes}
         ref={ref}
       >
+       
         <Select
-        defaultValue={selectedOption}
-        onChange={setSelectedOption}
-        options={options}
-      />
+          className='react-select-container' classNamePrefix="react-select"
+          defaultValue={selectedOption}
+          onChange={setSelectedOption}
+          options={options}
+       
+        />
       </div>
     )
   }
