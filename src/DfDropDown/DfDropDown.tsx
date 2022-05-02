@@ -17,6 +17,7 @@ export type DfDropDownProps =
     responsive?: Boolean
     defaultValue?: string
     onChange?: (newValue: any) => void;
+    option?: string[]
   }
 
 const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
@@ -29,6 +30,8 @@ const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
       children,
       defaultValue,
       onChange,
+
+      option,
       ...props
     },
     ref
@@ -41,14 +44,12 @@ const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
     )
     const [selectedOption, setSelectedOption] = useState(defaultValue);
 
+    const options = option?.map((o: string) => {
+      return { value: o.toLowerCase(), label: o }
+    })
 
-    const options = [
-      { value: 'chocolate', label: 'Chocolate' },
-      { value: 'strawberry', label: 'Strawberry' },
-      { value: 'vanilla', label: 'Vanilla' },
-    ];
-    const dfvA = options.filter((o => o.label == defaultValue))
-    const df = dfvA[0]
+    const defaultValueObject = options?.filter(((o: any) => o.label == defaultValue))
+    const _defaultValue = defaultValueObject && defaultValueObject[0] ? defaultValueObject[0] : ""
     const targetHeight = 30;
     const focusColor = 'hsl(var(--pf))';
     const hoverColor = 'hsl(var(--b3))';
@@ -112,9 +113,9 @@ const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
           className={classes}
           ref={ref}
         >
-          {dfvA && dfvA.length > 0 ? < Select
+          {defaultValueObject && defaultValueObject.length > 0 ? < Select
             // className='react-select-container' classNamePrefix="react-select"
-            defaultValue={df}
+            defaultValue={_defaultValue}
             onChange={onChange}
             // onSelect={(e) => {
 

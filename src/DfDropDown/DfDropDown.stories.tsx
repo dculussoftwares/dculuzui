@@ -15,7 +15,12 @@ export default meta
 
 const Template: Story = ({ children, ...rest }) => <DfDropDown defaultValue={'Chocolate'} onChange={(value) => {
   console.log("value", value)
-}} {...rest}>{children}</DfDropDown>;
+}}
+  option={[
+    'Chocolate', 'Strawberry', 'Vanilla'
+
+  ]}
+  {...rest}>{children}</DfDropDown>;
 
 export const Default = Template.bind({
 
