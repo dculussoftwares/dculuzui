@@ -8,5 +8,5 @@
 # fi
  echo "Upadating package version"
  npm --no-git-tag-version version patch -f
- git add .
+ git add package.json
  exit 0
