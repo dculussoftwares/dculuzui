@@ -13,22 +13,26 @@ const meta: Meta = {
 
 export default meta
 
-const Template: Story = ({ children, ...rest}) => <DfDropDown {...rest}>{children}</DfDropDown>;
+const Template: Story = ({ children, ...rest }) => <DfDropDown defaultValue={'Chocolate'} onChange={(value) => {
+  console.log("value", value)
+}} {...rest}>{children}</DfDropDown>;
 
-export const Default = Template.bind({})
+export const Default = Template.bind({
+
+})
 Default.args = {}
 
 export const Disabled: Story<DfDropDownProps> = (args) => {
   return (
 
-      
-      <DfDropDown {...args} disabled={true}>Disabled</DfDropDown>
+
+    <DfDropDown {...args} disabled={true}>Disabled</DfDropDown>
   )
 }
 export const Responsive: Story<DfDropDownProps> = (args) => {
   return (
 
-      
-      <DfDropDown {...args} responsive={true}>Responsive</DfDropDown>
+
+    <DfDropDown {...args} responsive={true}>Responsive</DfDropDown>
   )
 }

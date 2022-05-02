@@ -1,7 +1,7 @@
 import React, { forwardRef, ReactNode, useState } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
-import Select from 'react-select'
+import Select, { OnChangeValue } from 'react-select'
 import "./DfDropDown.css"
 
 
@@ -15,6 +15,8 @@ export type DfDropDownProps =
   & {
     disabled?: Boolean
     responsive?: Boolean
+    defaultValue?: string
+    onChange?: (newValue: any) => void;
   }
 
 const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
@@ -25,6 +27,8 @@ const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
       dataTheme,
       className,
       children,
+      defaultValue,
+      onChange,
       ...props
     },
     ref
@@ -35,14 +39,16 @@ const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
       }),
       className,
     )
-    const [selectedOption, setSelectedOption] = useState(null);
+    const [selectedOption, setSelectedOption] = useState(defaultValue);
+
 
     const options = [
       { value: 'chocolate', label: 'Chocolate' },
       { value: 'strawberry', label: 'Strawberry' },
       { value: 'vanilla', label: 'Vanilla' },
     ];
-
+    const dfvA = options.filter((o => o.label == defaultValue))
+    const df = dfvA[0]
     const targetHeight = 30;
     const focusColor = 'hsl(var(--pf))';
     const hoverColor = 'hsl(var(--b3))';
@@ -64,7 +70,7 @@ const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
         fontSize: 14,
         minHeight: 'initial',
         borderRadius: "var(--rounded-btn, 0.5rem)",
-        borderWidth:"0.5px",
+        borderWidth: "0.5px",
 
         boxShadow: state.isFocused ? 0 : 0,
         // borderColor: "hsl(var(--bc) / var(--tw-border-opacity))",
@@ -106,11 +112,14 @@ const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
           className={classes}
           ref={ref}
         >
-
-          <Select
+          {dfvA && dfvA.length > 0 ? < Select
             // className='react-select-container' classNamePrefix="react-select"
-            defaultValue={selectedOption}
-            // onChange={setSelectedOption}
+            defaultValue={df}
+            onChange={onChange}
+            // onSelect={(e) => {
+
+            // }}
+
             options={options}
             styles={customStyles}
             theme={(theme) => ({
@@ -127,7 +136,8 @@ const DfDropDown = forwardRef<HTMLDivElement, DfDropDownProps>(
               },
             })}
 
-          />
+          /> : <p>No options avialble</p>}
+
         </div>
       </div>
     )
