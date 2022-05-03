@@ -15,6 +15,7 @@ export const CopyButton = ({ text = '', ...rest }: CopyButtonProps) => {
       .then(() => setIsCopied(true))
       .catch(() => setIsCopied(false))
   }
+  
 
   const handleClick: React.MouseEventHandler = () => {
     copy()
