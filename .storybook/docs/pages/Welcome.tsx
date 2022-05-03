@@ -91,12 +91,12 @@ export const HomePage = () => {
 
               <CodeMockup className="border-base-content w-full max-w-sm flex-1 border-2 border-opacity-20 bg-transparent pb-6 text-left text-current lg:mx-0">
                 <CodeMockup.Line>
-                  npm i daisyui react-dculus-daisyui{' '}
+                  npm i daisyui react-daisyui{' '}
                   <Tooltip message="Copy">
                     <CopyButton
                       color="ghost"
                       size="xs"
-                      text="npm i daisyui react-dculus-daisyui"
+                      text="npm i daisyui react-daisyui"
                     />
                   </Tooltip>
                 </CodeMockup.Line>
@@ -108,14 +108,14 @@ export const HomePage = () => {
                 startIcon={githubMark}
                 size="lg"
                 color="ghost"
-                href="https://github.com/daisyui/react-dculus-daisyui"
+                href="https://github.com/daisyui/react-daisyui"
                 target="_blank"
               >
                 GitHub
               </Button>
               <Button
                 size="lg"
-                href="https://www.npmjs.com/package/react-dculus-daisyui"
+                href="https://www.npmjs.com/package/react-daisyui"
                 target="_blank"
               >
                 NPM

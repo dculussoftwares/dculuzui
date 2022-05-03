@@ -3,7 +3,7 @@ import { create } from '@storybook/theming'
 const baseTheme = {
   base: 'dark',
   brandTitle: 'react-daisyUI',
-  brandUrl: 'https://github.com/daisyui/react-dculus-daisyui',
+  brandUrl: 'https://github.com/daisyui/react-daisyui',
   brandImage:
     'https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg',
 

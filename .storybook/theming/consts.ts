@@ -1,5 +1,5 @@
 export const DEFAULT_THEME = 'dark'
-export const STORAGE_KEY = 'sb-react-dculus-daisyui-preview-theme'
+export const STORAGE_KEY = 'sb-react-daisyui-preview-theme'
 
 export const THEME_PICKER_LIST = [
   { name: 'light', class: 'light', color: '#570df8' },

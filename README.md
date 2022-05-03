@@ -1,10 +1,10 @@
-[![NPM Version](https://img.shields.io/npm/v/react-dculus-daisyui.svg?branch=master)](https://www.npmjs.com/package/react-dculus-daisyui) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-dculus-daisyui)](https://bundlephobia.com/result?p=react-dculus-daisyui) ![npm](https://img.shields.io/npm/dm/react-dculus-daisyui?label=installs) [![License](https://img.shields.io/npm/l/react-dculus-daisyui.svg)](https://github.com/daisyui/react-dculus-daisyui/blob/master/LICENSE) [![Discord Invite](https://img.shields.io/discord/951593480625459340?color=%237289DA&label=chat&logo=discord&logoColor=white)](https://discord.gg/4v2eS3VQNv)
+[![NPM Version](https://img.shields.io/npm/v/react-daisyui.svg?branch=master)](https://www.npmjs.com/package/react-daisyui) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-daisyui)](https://bundlephobia.com/result?p=react-daisyui) ![npm](https://img.shields.io/npm/dm/react-daisyui?label=installs) [![License](https://img.shields.io/npm/l/react-daisyui.svg)](https://github.com/daisyui/react-daisyui/blob/master/LICENSE) [![Discord Invite](https://img.shields.io/discord/951593480625459340?color=%237289DA&label=chat&logo=discord&logoColor=white)](https://discord.gg/4v2eS3VQNv)
 
-# Dculus react-dculus-daisyui 🌼
+# Dculus react-daisyui 🌼
 
 DaisyUI components built with React, Typescript and TailwindCSS.
 
-📖 Check out our <a href="https://react.daisyui.com/">Storybook</a> | 🎲 Try it with <a href="https://codesandbox.io/s/react-dculus-daisyui-example-840os3?file=/src/App.tsx">CodeSandbox</a>
+📖 Check out our <a href="https://react.daisyui.com/">Storybook</a> | 🎲 Try it with <a href="https://codesandbox.io/s/react-daisyui-example-840os3?file=/src/App.tsx">CodeSandbox</a>
 
 🙋 Need help or have a suggestion? Join our [discord](https://discord.gg/4v2eS3VQNv)!
 
@@ -17,7 +17,7 @@ Make sure you've installed <a href="https://tailwindcss.com/docs/installation">T
 Install the package with npm or yarn:
 
 ```bash
-npm install react-dculus-daisyui
+npm install react-daisyui
 ```
 
 To prevent TailwindCSS from purging your styles, add the following line to your tailwind.config.js:
@@ -37,10 +37,10 @@ module.exports = {
 
 ## ⚡ Quick Start
 
-Import react-dculus-daisyui components within your component files:
+Import react-daisyui components within your component files:
 
 ```js
-import { Button } from 'react-dculus-daisyui'
+import { Button } from 'react-daisyui'
 
 export default (props) => {
   return <Button color="primary">Click me!</Button>
@@ -52,7 +52,7 @@ export default (props) => {
 To apply a theme (or multiple themes) to a page or components, import the Theme component and wrap your content:
 
 ```js
-import { Theme, Button } from 'react-dculus-daisyui'
+import { Theme, Button } from 'react-daisyui'
 
 export default (props) => {
   return (
@@ -170,4 +170,4 @@ Check out the official <a href="https://daisyui.com/components/">daisyUI example
 
 ### License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/daisyui/react-dculus-daisyui/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/daisyui/react-daisyui/blob/main/LICENSE) file for details.
