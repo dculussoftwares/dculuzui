@@ -27,7 +27,7 @@ export const Default: Story<IndicatorProps> = (args) => {
 
 Default.args = {
   children: (
-    <Avatar src="http://daisyui.com/tailwind-css-component-profile-1@94w.png" />
+    <Avatar src="http://dculuzui.com/tailwind-css-component-profile-1@94w.png" />
   ),
   item: <Badge color="error" />,
 }

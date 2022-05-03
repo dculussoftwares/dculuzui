@@ -72,7 +72,7 @@ export const HomePage = () => {
               <div className="mb-2 text-5xl lg:text-7xl">react-daisyUI</div>
               <div className="text-2xl lg:text-3xl">
                 A React component library for{' '}
-                <Link color="info" href="https://daisyui.com/" target="_blank">
+                <Link color="info" href="https://dculuzui.com/" target="_blank">
                   daisyUI
                 </Link>
                 , <br />
@@ -91,12 +91,12 @@ export const HomePage = () => {
 
               <CodeMockup className="border-base-content w-full max-w-sm flex-1 border-2 border-opacity-20 bg-transparent pb-6 text-left text-current lg:mx-0">
                 <CodeMockup.Line>
-                  npm i daisyui react-daisyui{' '}
+                  npm i dculuzui react-dculuzui{' '}
                   <Tooltip message="Copy">
                     <CopyButton
                       color="ghost"
                       size="xs"
-                      text="npm i daisyui react-daisyui"
+                      text="npm i dculuzui react-dculuzui"
                     />
                   </Tooltip>
                 </CodeMockup.Line>
@@ -108,14 +108,14 @@ export const HomePage = () => {
                 startIcon={githubMark}
                 size="lg"
                 color="ghost"
-                href="https://github.com/daisyui/react-daisyui"
+                href="https://github.com/dculuzui/react-dculuzui"
                 target="_blank"
               >
                 GitHub
               </Button>
               <Button
                 size="lg"
-                href="https://www.npmjs.com/package/react-daisyui"
+                href="https://www.npmjs.com/package/react-dculuzui"
                 target="_blank"
               >
                 NPM

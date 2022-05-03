@@ -20,14 +20,14 @@ const Template: Story<CodeMockupProps> = (args) => {
 
 export const Default = Template.bind({})
 Default.args = {
-  children: <CodeMockup.Line>yarn add daisyui react-daisyui</CodeMockup.Line>,
+  children: <CodeMockup.Line>yarn add dculuzui react-dculuzui</CodeMockup.Line>,
 }
 
 export const LinePrefix = Template.bind({})
 LinePrefix.args = {
   children: (
     <CodeMockup.Line dataPrefix="$">
-      yarn add daisyui react-daisyui
+      yarn add dculuzui react-dculuzui
     </CodeMockup.Line>
   ),
 }
@@ -35,7 +35,7 @@ LinePrefix.args = {
 export const MultiLine = Template.bind({})
 MultiLine.args = {
   children: [
-    <CodeMockup.Line>yarn add daisyui react-daisyui</CodeMockup.Line>,
+    <CodeMockup.Line>yarn add dculuzui react-dculuzui</CodeMockup.Line>,
     <CodeMockup.Line className="text-warning">installing...</CodeMockup.Line>,
     <CodeMockup.Line className="text-success">Done!</CodeMockup.Line>,
   ],
@@ -44,7 +44,7 @@ MultiLine.args = {
 export const HighlightedLine = Template.bind({})
 HighlightedLine.args = {
   children: [
-    <CodeMockup.Line>yarn add daisyui react-daisyui</CodeMockup.Line>,
+    <CodeMockup.Line>yarn add dculuzui react-dculuzui</CodeMockup.Line>,
     <CodeMockup.Line>installing...</CodeMockup.Line>,
     <CodeMockup.Line status="warning">Error!</CodeMockup.Line>,
   ],

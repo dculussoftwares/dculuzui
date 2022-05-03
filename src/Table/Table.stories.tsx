@@ -110,7 +110,7 @@ export const WithVisualElements: Story<TableProps> = (args) => {
           <div className="flex items-center space-x-3">
             <Mask
               variant="squircle"
-              src="http://daisyui.com/tailwind-css-component-profile-2@56w.png"
+              src="http://dculuzui.com/tailwind-css-component-profile-2@56w.png"
             />
             <div>
               <div className="font-bold">Hart Hagerty</div>
@@ -135,7 +135,7 @@ export const WithVisualElements: Story<TableProps> = (args) => {
           <div className="flex items-center space-x-3">
             <Mask
               variant="squircle"
-              src="http://daisyui.com/tailwind-css-component-profile-3@56w.png"
+              src="http://dculuzui.com/tailwind-css-component-profile-3@56w.png"
             />
             <div>
               <div className="font-bold">Brice Swyre</div>
@@ -160,7 +160,7 @@ export const WithVisualElements: Story<TableProps> = (args) => {
           <div className="flex items-center space-x-3">
             <Mask
               variant="squircle"
-              src="http://daisyui.com/tailwind-css-component-profile-4@56w.png"
+              src="http://dculuzui.com/tailwind-css-component-profile-4@56w.png"
             />
             <div>
               <div className="font-bold">Marjy Ferencz</div>
@@ -185,7 +185,7 @@ export const WithVisualElements: Story<TableProps> = (args) => {
           <div className="flex items-center space-x-3">
             <Mask
               variant="squircle"
-              src="http://daisyui.com/tailwind-css-component-profile-5@56w.png"
+              src="http://dculuzui.com/tailwind-css-component-profile-5@56w.png"
             />
             <div>
               <div className="font-bold">Yancy Tear</div>

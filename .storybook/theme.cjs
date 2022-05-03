@@ -3,9 +3,9 @@ import { create } from '@storybook/theming'
 const baseTheme = {
   base: 'dark',
   brandTitle: 'react-daisyUI',
-  brandUrl: 'https://github.com/daisyui/react-daisyui',
+  brandUrl: 'https://github.com/dculuzui/react-dculuzui',
   brandImage:
-    'https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg',
+    'https://raw.githubusercontent.com/saadeghi/files/main/dculuzui/logo-4.svg',
 
   colorPrimary: '#3ABFF8',
   colorSecondary: '#6419E6',

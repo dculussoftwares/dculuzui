@@ -1,22 +1,22 @@
 {
-  "name": "react-daisyui",
-  "version": "2.0.2",
-  "description": "react-daisyui - DaisyUI components built with React 🌼",
-  "author": "daisyui",
+  "name": "react-dculuzui",
+  "version": "2.0.3",
+  "description": "react-dculuzui - DaisyUI components built with React 🌼",
+  "author": "dculuzui",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/daisyui/react-daisyui.git"
+    "url": "https://github.com/dculuzui/react-dculuzui.git"
   },
   "type": "module",
   "exports": {
-    "import": "./dist/react-daisyui.modern.js",
-    "require": "./dist/react-daisyui.cjs",
-    "default": "./dist/react-daisyui.modern.js"
+    "import": "./dist/react-dculuzui.modern.js",
+    "require": "./dist/react-dculuzui.cjs",
+    "default": "./dist/react-dculuzui.modern.js"
   },
-  "main": "./dist/react-daisyui.cjs",
-  "module": "./dist/react-daisyui.esm.js",
-  "unpkg": "./dist/react-daisyui.umd.js",
+  "main": "./dist/react-dculuzui.cjs",
+  "module": "./dist/react-dculuzui.esm.js",
+  "unpkg": "./dist/react-dculuzui.umd.js",
   "sideEffects": false,
   "files": [
     "dist"

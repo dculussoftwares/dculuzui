@@ -15,12 +15,12 @@ const Template: Story<AvatarProps> = (args) => {
 export const Default = Template.bind({})
 Default.args = {
   color: 'primary',
-  src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
+  src: 'http://dculuzui.com/tailwind-css-component-profile-1@94w.png',
 }
 
 export const Rounded = Template.bind({})
 Rounded.args = {
-  src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
+  src: 'http://dculuzui.com/tailwind-css-component-profile-1@94w.png',
   shape: 'circle',
 }
 
@@ -34,12 +34,12 @@ export const Group: Story<AvatarProps> = (args) => {
   )
 }
 Group.args = {
-  src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
+  src: 'http://dculuzui.com/tailwind-css-component-profile-1@94w.png',
 }
 
 export const Ring = Template.bind({})
 Ring.args = {
-  src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
+  src: 'http://dculuzui.com/tailwind-css-component-profile-1@94w.png',
   border: true,
   borderColor: 'primary',
   shape: 'circle',

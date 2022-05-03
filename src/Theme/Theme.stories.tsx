@@ -32,7 +32,7 @@ export const Default: Story<ThemeProps> = (args) => {
               document
                 .getElementsByTagName('html')[0]
                 .setAttribute('data-theme', t)
-              window.localStorage.setItem('sb-react-daisyui-preview-theme', t)
+              window.localStorage.setItem('sb-react-dculuzui-preview-theme', t)
               setTheme(t)
             }}
           />
@@ -66,7 +66,7 @@ export const NestedThemes: Story<ThemeProps> = (args) => {
               .getElementsByTagName('html')[0]
               .setAttribute('data-theme', themes[i])
             window.localStorage.setItem(
-              'sb-react-daisyui-preview-theme',
+              'sb-react-dculuzui-preview-theme',
               themes[i]
             )
             setTheme(themes[i])
@@ -87,7 +87,7 @@ export const NestedThemes: Story<ThemeProps> = (args) => {
                 .getElementsByTagName('html')[0]
                 .setAttribute('data-theme', themes[i + 1])
               window.localStorage.setItem(
-                'sb-react-daisyui-preview-theme',
+                'sb-react-dculuzui-preview-theme',
                 themes[i + 1]
               )
               setTheme(themes[i + 1])

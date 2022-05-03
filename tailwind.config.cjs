@@ -8,7 +8,7 @@ module.exports = {
       pattern: /./
     },
   ],
-  daisyui: {
+  dculuzui: {
     styled: true,
     themes: true,
     base: true,
