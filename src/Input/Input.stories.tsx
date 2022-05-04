@@ -15,3 +15,8 @@ export const Default: Story<InputProps> = (args) => {
 Default.args = {
   bordered: true,
 }
+
+
+export const Magnet: Story<InputProps> = (args) => {
+  return <Input color="magnet" {...args} />
+}
