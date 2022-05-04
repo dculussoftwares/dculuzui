@@ -11,3 +11,7 @@ export default {
 export const Default: Story<TextareaProps> = (args) => {
   return <Textarea {...args} bordered />
 }
+
+export const Magnet: Story<TextareaProps> = (args) => {
+  return <Textarea color="magnet" {...args} />
+}
