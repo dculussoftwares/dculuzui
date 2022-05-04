@@ -20,3 +20,6 @@ Default.args = {
 export const Magnet: Story<InputProps> = (args) => {
   return <Input color="magnet" {...args} />
 }
+export const SizeSm: Story<InputProps> = (args) => {
+  return <Input size="sm" value="text-sm-size" color="magnet" {...args} />
+}
