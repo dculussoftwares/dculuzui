@@ -1,6 +1,6 @@
 {
   "name": "react-dculuzui",
-  "version": "2.0.9",
+  "version": "2.0.11",
   "description": "react-dculuzui - DaisyUI components built with React 🌼",
   "author": "dculuzui",
   "license": "MIT",
@@ -35,7 +35,7 @@
     "patch": "sh ./patch.sh"
   },
   "peerDependencies": {
-    "dculusux": "^2.14.7",
+    "dculusux": "^2.14.8",
     "react": ">=16",
     "react-dom": ">=16",
     "tailwindcss": "^3.0.23"
