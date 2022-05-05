@@ -23,3 +23,7 @@ export const Magnet: Story<InputProps> = (args) => {
 export const SizeSm: Story<InputProps> = (args) => {
   return <Input size="sm" value="text-sm-size" color="magnet" {...args} />
 }
+
+export const WithoutBordered: Story<InputProps> = (args) => {
+  return <Input size="sm" color="magnet" />
+}
