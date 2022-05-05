@@ -37,7 +37,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       clsx({
         [`input-${size}`]: size,
         [`input-${color}`]: color,
-        [`focus:outline-offset-0`]: true,
+        [`focus:outline-offset-0`]: !borderOffset,
         'input-bordered': bordered,
       })
     )
