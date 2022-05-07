@@ -20,17 +20,5 @@ const Template: Story<RadioGroupProps> = (args) => {
   )
 }
 
-export const Default = Template.bind({})
-Default.args = {}
-
 export const PrimaryColor = Template.bind({})
 PrimaryColor.args = { color: 'primary' }
-
-export const SecondaryColor = Template.bind({})
-SecondaryColor.args = { color: 'secondary' }
-
-export const AccentColor = Template.bind({})
-AccentColor.args = { color: 'accent' }
-
-export const Disabled = Template.bind({})
-Disabled.args = { disabled: true }
