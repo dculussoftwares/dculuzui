@@ -7,6 +7,7 @@ import {
   ComponentBrandColors,
   ComponentSize,
 } from '../types'
+import { ToggleGroup } from './ToggleGroup'
 
 export type RadioGroupProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
@@ -33,6 +34,18 @@ const RadioGroup = forwardRef<HTMLInputElement, RadioGroupProps>(
       console.log(event.target.value);
     };
 
+    let items = [
+      { value: "a", label: "Option 1" },
+      { value: "b", label: "Option 2" },
+      { value: "c", label: "Option 3" },
+      { value: "d", label: "Option 4", disabled: true },
+      { value: "e", label: "Option 5" }
+  ]
+  
+  function onChange(value) {
+     console.log(value); 
+  }
+
     return (
       <>
         <div onChange={onChangeValue}>
@@ -50,6 +63,7 @@ const RadioGroup = forwardRef<HTMLInputElement, RadioGroupProps>(
               {option}
             </label>
           })}
+          <ToggleGroup items={items} name="opt-group" value="c" className="radio-group" onUpdate={onChange}  classes={classes}/>
         </div>
       </>
     )
