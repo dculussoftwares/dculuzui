@@ -109,6 +109,11 @@ export { default as Radio } from './Radio'
 import { RadioProps as TRadioProps } from './Radio'
 export type RadioProps = TRadioProps
 
+// Data Input > RadioGroup
+export { default as RadioGroup } from './RadioGroup'
+import { RadioGroupProps as TRadioGroupProps } from './RadioGroup'
+export type RadioGroupProps = TRadioGroupProps
+
 // Data Input > Range
 export { default as Range } from './Range'
 import { RangeProps as TRangeProps } from './Range'
