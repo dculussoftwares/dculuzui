@@ -2,13 +2,13 @@ import React from 'react'
 import { twMerge } from 'tailwind-merge'
 
 class ToggleGroup extends React.Component {
-    constructor(props) {
+    constructor(props: any) {
         super(props);
 
         this.state = { value: this.props.value };
     }
 
-    onChange(e) {
+    onChange(e:any) {
         let value = e.target.value;
 
         this.setState({ value: value }, () => typeof this.props.onUpdate === "function" ? this.props.onUpdate(value) : null);
