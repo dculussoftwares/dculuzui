@@ -80,6 +80,7 @@ const RadioGroup = forwardRef<HTMLInputElement, RadioGroupProps>(
               return (
                 <label key={item.value}>
                   <input
+                    ref={ref}
                     className={classes}
                     type="radio"
                     checked={$value === item.value}
@@ -87,6 +88,7 @@ const RadioGroup = forwardRef<HTMLInputElement, RadioGroupProps>(
                     value={item.value}
                     name={"opt-group"}
                     onChange={onChange}
+                    data-theme={dataTheme}
                   />
                   <span>{item.label}</span>
                 </label>
