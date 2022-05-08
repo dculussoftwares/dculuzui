@@ -21,7 +21,9 @@ export const Default: Story<DrawerProps> = (args) => {
   )
 
   return (
-    <Drawer {...args} id="sidebar-id" className="h-screen w-full" side={side}>
+    <Drawer {...args} id="sidebar-id" className="h-screen w-full" side={side} onClose={() => {
+      console.log("On close")
+    }}>
       <div className="w-full flex items-center justify-center">
         <label htmlFor="sidebar-id" className="btn btn-primary drawer-button">
           Open drawer

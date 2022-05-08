@@ -11,6 +11,7 @@ export type DrawerProps = React.HTMLAttributes<HTMLDivElement> &
     open?: boolean
     mobile?: boolean
     end?: boolean
+    onClose?: any
   }
 
 const Drawer = ({
@@ -22,6 +23,7 @@ const Drawer = ({
   id,
   dataTheme,
   className,
+  onClose,
   ...props
 }: DrawerProps) => {
   const classes = twMerge(
@@ -43,7 +45,10 @@ const Drawer = ({
       <input id={id} type="checkbox" className="drawer-toggle" checked={open} />
       <div className="drawer-content">{children}</div>
       <div className="drawer-side">
-        <label htmlFor={id} className="drawer-overlay"></label>
+        <label htmlFor={id} className="drawer-overlay"
+          onClick={() => {
+            onClose()
+          }}></label>
         {side}
       </div>
     </div>
