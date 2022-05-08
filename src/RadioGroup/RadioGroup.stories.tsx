@@ -21,7 +21,6 @@ export const Default = Template.bind({})
 Default.args = {
   options: [
     "a", "b", "c", "d", "e"
-
   ]
 }
 
@@ -29,9 +28,13 @@ export const WithOptions = Template.bind({})
 WithOptions.args = {
   options: [
     "a", "b", "c", "d", "e"
-
   ],
   value: "a"
+
+}
+
+export const NoOptions = Template.bind({})
+NoOptions.args = {
 
 }
 

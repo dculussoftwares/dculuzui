@@ -51,24 +51,26 @@ const RadioGroup = forwardRef<HTMLInputElement, RadioGroupProps>(
 
     return (
       <div className='flex flex-col'>
-        {options.map((item, index) => {
-          return (
-            <label key={index} className='flex items-center mt-5'>
-              <input
-                ref={ref}
-                className={classes}
-                type="radio"
-                checked={$value === item}
-                // disabled={item.disabled}
-                value={item}
-                name={"opt-group"}
-                onChange={onUpdate}
-                data-theme={dataTheme}
-              />
-              <span className='pl-2.5'>{item}</span>
-            </label>
-          );
-        })}
+        {options && options.length > 0 ? (
+          options.map((item, index) => {
+            return (
+              <label key={index} className='flex items-center mt-5'>
+                <input
+                  ref={ref}
+                  className={classes}
+                  type="radio"
+                  checked={$value === item}
+                  // disabled={item.disabled}
+                  value={item}
+                  name={"opt-group"}
+                  onChange={onUpdate}
+                  data-theme={dataTheme}
+                />
+                <span className='pl-2.5'>{item}</span>
+              </label>
+            );
+          })
+        ) : <p>No options avialble</p>}
       </div>
     )
   }
