@@ -18,43 +18,73 @@ const Template: Story<RadioGroupProps> = (args) => {
 }
 
 export const Default = Template.bind({})
-Default.args = {}
+Default.args = {
+  options: [
+    "a", "b", "c", "d", "e"
+
+  ]
+}
+
+export const WithOptions = Template.bind({})
+WithOptions.args = {
+  options: [
+    "a", "b", "c", "d", "e"
+
+  ],
+  value: "a"
+
+}
 
 export const PrimaryColor = Template.bind({})
-PrimaryColor.args = { color: 'primary' }
+PrimaryColor.args = {
+  color: 'primary', options: [
+    "a", "b", "c", "d", "e"
+
+  ]
+}
 
 export const SecondaryColor = Template.bind({})
-SecondaryColor.args = { color: 'secondary' }
+SecondaryColor.args = {
+  color: 'secondary', options: [
+    "a", "b", "c", "d", "e"
+
+  ]
+}
 
 export const AccentColor = Template.bind({})
-AccentColor.args = { color: 'accent' }
+AccentColor.args = {
+  color: 'accent', options: [
+    "a", "b", "c", "d", "e"
 
-export const Disabled = Template.bind({})
-Disabled.args = { disabled: true }
-
-export const WithLabelsAndForm: Story<RadioGroupProps> = (args) => {
-  return (
-    <div className="bg-base-200 w-1/4 p-4 rounded-lg shadow">
-      <Form>
-        <Form.Label title="Red Pill">
-          <RadioGroup
-            {...args}
-            name="radio1"
-            className="checked:bg-red-500"
-            defaultChecked
-          />
-        </Form.Label>
-      </Form>
-      <Form>
-        <Form.Label title="Blue Pill">
-          <RadioGroup
-            {...args}
-            name="radio1"
-            className="checked:bg-blue-500"
-            defaultChecked
-          />
-        </Form.Label>
-      </Form>
-    </div>
-  )
+  ]
 }
+
+// export const Disabled = Template.bind({})
+// Disabled.args = { disabled: true }
+
+// export const WithLabelsAndForm: Story<RadioGroupProps> = (args) => {
+//   return (
+//     <div className="bg-base-200 w-1/4 p-4 rounded-lg shadow">
+//       <Form>
+//         <Form.Label title="Red Pill">
+//           <RadioGroup
+//             {...args}
+//             name="radio1"
+//             className="checked:bg-red-500"
+//             defaultChecked
+//           />
+//         </Form.Label>
+//       </Form>
+//       <Form>
+//         <Form.Label title="Blue Pill">
+//           <RadioGroup
+//             {...args}
+//             name="radio1"
+//             className="checked:bg-blue-500"
+//             defaultChecked
+//           />
+//         </Form.Label>
+//       </Form>
+//     </div>
+//   )
+// }

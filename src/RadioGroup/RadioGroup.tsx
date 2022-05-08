@@ -17,6 +17,7 @@ export type RadioGroupProps = Omit<
     size?: ComponentSize
     options: string[]
     value?: string
+    onChange?: any
   }
 
 export type item = {
@@ -26,7 +27,7 @@ export type item = {
 }
 
 const RadioGroup = forwardRef<HTMLInputElement, RadioGroupProps>(
-  ({ color, size, name, dataTheme, className, options, value, ...props }, ref): JSX.Element => {
+  ({ color, size, name, dataTheme, className, options, onChange, value, ...props }, ref): JSX.Element => {
     const classes = twMerge(
       'radio',
       className,
@@ -36,37 +37,35 @@ const RadioGroup = forwardRef<HTMLInputElement, RadioGroupProps>(
       })
     )
     const [$value, $setValue] = React.useState(value)
-    let items: item[] = [
-      { value: "a", label: "Option 1" },
-      { value: "b", label: "Option 2" },
-      { value: "c", label: "Option 3" },
-      { value: "d", label: "Option 4", disabled: true },
-      { value: "e", label: "Option 5" }
+    let items: string[] = [
+      "a", "b", "c", "d", "e"
+
     ]
 
-    function onChange(e: any) {
-      // console.log(value);
+    function onUpdate(e: any) {
       let val = e.target.value;
       $setValue(val)
+      onChange(val)
+      console.log("first", val)
     }
 
     return (
       <div className='flex flex-col'>
-        {items.map(item => {
+        {options.map((item, index) => {
           return (
-            <label key={item.value} className='flex items-center mt-5'>
+            <label key={index} className='flex items-center mt-5'>
               <input
                 ref={ref}
                 className={classes}
                 type="radio"
-                checked={$value === item.value}
-                disabled={item.disabled}
-                value={item.value}
+                checked={$value === item}
+                // disabled={item.disabled}
+                value={item}
                 name={"opt-group"}
-                onChange={onChange}
+                onChange={onUpdate}
                 data-theme={dataTheme}
               />
-              <span className='pl-2.5'>{item.label}</span>
+              <span className='pl-2.5'>{item}</span>
             </label>
           );
         })}
