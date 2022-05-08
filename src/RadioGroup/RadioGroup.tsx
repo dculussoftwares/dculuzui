@@ -1,11 +1,12 @@
-import clsx from 'clsx'
 import React, { forwardRef } from 'react'
+import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
-import {
-  ComponentBrandColors,
-  ComponentSize, IComponentBaseProps
-} from '../types'
 
+import {
+  IComponentBaseProps,
+  ComponentBrandColors,
+  ComponentSize,
+} from '../types'
 
 export type RadioGroupProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
@@ -14,7 +15,7 @@ export type RadioGroupProps = Omit<
   IComponentBaseProps & {
     color?: ComponentBrandColors
     size?: ComponentSize
-    options: string[],
+    options: string[]
     value?: string
   }
 
@@ -34,11 +35,7 @@ const RadioGroup = forwardRef<HTMLInputElement, RadioGroupProps>(
         [`radio-${color}`]: color,
       })
     )
-
-    const onChangeValue = (event: any) => {
-      console.log(event.target.value);
-    };
-
+    const [$value, $setValue] = React.useState(value)
     let items: item[] = [
       { value: "a", label: "Option 1" },
       { value: "b", label: "Option 2" },
@@ -47,8 +44,6 @@ const RadioGroup = forwardRef<HTMLInputElement, RadioGroupProps>(
       { value: "e", label: "Option 5" }
     ]
 
-    const [$value, $setValue] = React.useState(value)
-
     function onChange(e: any) {
       // console.log(value);
       let val = e.target.value;
@@ -56,52 +51,30 @@ const RadioGroup = forwardRef<HTMLInputElement, RadioGroupProps>(
     }
 
     return (
-      <>
-        <div onChange={onChangeValue}>
-          {options && options.map((option, index) => {
-            return <label key={index} className="radio-child">
+      <div >
+        {items.map(item => {
+          return (
+            <label key={item.value}>
               <input
-                value={option}
-                {...props}
                 ref={ref}
-                type="radio"
-                name={name}
-                data-theme={dataTheme}
                 className={classes}
+                type="radio"
+                checked={$value === item.value}
+                disabled={item.disabled}
+                value={item.value}
+                name={"opt-group"}
+                onChange={onChange}
+                data-theme={dataTheme}
               />
-              {option}
+              <span>{item.label}</span>
             </label>
-          })}
-          {/* <ToggleGroup items={items} name="opt-group" value="c" className="radio-group" onUpdate={onChange} classes={classes} /> */}
-
-
-          <div >
-            {items.map(item => {
-              return (
-                <label key={item.value}>
-                  <input
-                    ref={ref}
-                    className={classes}
-                    type="radio"
-                    checked={$value === item.value}
-                    disabled={item.disabled}
-                    value={item.value}
-                    name={"opt-group"}
-                    onChange={onChange}
-                    data-theme={dataTheme}
-                  />
-                  <span>{item.label}</span>
-                </label>
-              );
-            })}
-          </div>
-
-        </div>
-      </>
+          );
+        })}
+      </div>
     )
   }
 )
 
-RadioGroup.displayName = 'Radio'
+RadioGroup.displayName = 'RadioGroup'
 
 export default RadioGroup
