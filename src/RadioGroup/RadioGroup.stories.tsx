@@ -13,7 +13,6 @@ const Template: Story<RadioGroupProps> = (args) => {
   return (
     <Form>
       <RadioGroup {...args} name="radio1" />
-      <RadioGroup {...args} name="radio1" defaultChecked />
     </Form>
   )
 }

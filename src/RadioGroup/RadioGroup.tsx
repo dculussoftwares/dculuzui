@@ -51,10 +51,10 @@ const RadioGroup = forwardRef<HTMLInputElement, RadioGroupProps>(
     }
 
     return (
-      <div >
+      <div className='flex flex-col'>
         {items.map(item => {
           return (
-            <label key={item.value}>
+            <label key={item.value} className='flex items-center mt-5'>
               <input
                 ref={ref}
                 className={classes}
@@ -66,7 +66,7 @@ const RadioGroup = forwardRef<HTMLInputElement, RadioGroupProps>(
                 onChange={onChange}
                 data-theme={dataTheme}
               />
-              <span>{item.label}</span>
+              <span className='pl-2.5'>{item.label}</span>
             </label>
           );
         })}
