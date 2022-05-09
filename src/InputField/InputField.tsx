@@ -42,12 +42,11 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
     const classes = twMerge(
       'input',
       className,
-      clsx({
+      clsx("mt-2",{
         [`input-${size}`]: size,
         [`input-${color}`]: color,
         [`focus:outline-offset-0`]: !borderOffset,
-        'input-bordered': bordered,
-        'mt-2': true,
+        'input-bordered': bordered
       })
     )
 
