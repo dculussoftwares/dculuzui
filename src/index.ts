@@ -104,6 +104,11 @@ export { default as Input } from './Input'
 import { InputProps as TInputProps } from './Input'
 export type InputProps = TInputProps
 
+// Data Input > InputField
+export { default as InputField } from './InputField'
+import { InputFieldProps as TInputFieldProps } from './InputField'
+export type InputFieldProps = TInputFieldProps
+
 // Data Input > Radio
 export { default as Radio } from './Radio'
 import { RadioProps as TRadioProps } from './Radio'
