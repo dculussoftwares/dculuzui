@@ -3,6 +3,8 @@ import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps, ComponentColor, ComponentSize } from '../types'
+import Form from '../Form'
+import Input from '../Input'
 
 export type InputFieldProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
@@ -12,7 +14,10 @@ export type InputFieldProps = Omit<
     bordered?: boolean
     borderOffset?: boolean
     size?: ComponentSize
-    color?: ComponentColor
+    color?: ComponentColor,
+    title?: string,
+    require?: boolean,
+    hint?: string
   }
 
 const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
@@ -27,6 +32,9 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
       dataTheme,
       className,
       type,
+      title,
+      require,
+      hint,
       ...props
     },
     ref
@@ -43,15 +51,23 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
     )
 
     return (
-      <input
-        {...props}
-        ref={ref}
-        type={type}
-        value={value}
-        placeholder={placeholder}
-        data-theme={dataTheme}
-        className={classes}
-      />
+        <Form.Label
+          title={title}
+          require={require}
+          hint={hint}
+          className="flex flex-col items-start"
+        >
+          <Input
+            {...props}
+            value={value}
+            ref={ref}
+            type={type}
+            placeholder={placeholder}
+            data-theme={dataTheme}
+            className={classes}
+
+          />
+        </Form.Label>
     )
   }
 )
