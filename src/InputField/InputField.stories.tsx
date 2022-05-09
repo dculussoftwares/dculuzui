@@ -18,7 +18,7 @@ Default.args = {
 
 
 export const Magnet: Story<InputFieldProps> = (args) => {
-  return <InputField color="magnet" {...args} />
+  return <InputField title='Some title' require={true} hint="Some hint" size='sm' color="magnet" {...args} />
 }
 export const SizeSm: Story<InputFieldProps> = (args) => {
   return <InputField size="sm" value="text-sm-size" color="magnet" {...args} />

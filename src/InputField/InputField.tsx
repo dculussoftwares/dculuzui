@@ -47,27 +47,28 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
         [`input-${color}`]: color,
         [`focus:outline-offset-0`]: !borderOffset,
         'input-bordered': bordered,
+        'mt-2': true,
       })
     )
 
     return (
-        <Form.Label
-          title={title}
-          require={require}
-          hint={hint}
-          className="flex flex-col items-start"
-        >
-          <Input
-            {...props}
-            value={value}
-            ref={ref}
-            type={type}
-            placeholder={placeholder}
-            data-theme={dataTheme}
-            className={classes}
+      <Form.Label
+        title={title}
+        require={require}
+        hint={hint}
+        className="flex flex-col items-start"
+      >
+        <Input
+          {...props}
+          value={value}
+          ref={ref}
+          type={type}
+          placeholder={placeholder}
+          data-theme={dataTheme}
+          className={classes}
 
-          />
-        </Form.Label>
+        />
+      </Form.Label>
     )
   }
 )
