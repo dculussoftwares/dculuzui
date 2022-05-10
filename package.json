@@ -30,6 +30,7 @@
     "format": "prettier --write ./src",
     "prepublishOnly": "npm run dist",
     "postpublish": "git push --no-verify && git push --tags",
+    "version-disabled": "npm run docs && git add -A docs",
     "generate": "plop",
     "patch": "sh ./patch.sh"
   },
