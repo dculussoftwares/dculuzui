@@ -39,17 +39,6 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
     },
     ref
   ): JSX.Element => {
-    const classes = twMerge(
-      'input',
-      className,
-      clsx("mt-2",{
-        [`input-${size}`]: size,
-        [`input-${color}`]: color,
-        [`focus:outline-offset-0`]: !borderOffset,
-        'input-bordered': bordered
-      })
-    )
-
     return (
       <Form.Label
         title={title}
@@ -64,7 +53,10 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
           type={type}
           placeholder={placeholder}
           data-theme={dataTheme}
-          className={classes}
+          size={size}
+          color={color}
+          borderOffset={borderOffset}
+          bordered={borderOffset}
 
         />
       </Form.Label>
