@@ -7,7 +7,7 @@ export const componentStatuses = [
   'warning',
   'error',
 ] as const
-export const brandColors = ['primary', 'secondary', 'accent'] as const
+export const brandColors = ['primary', 'secondary', 'accent', 'magnet'] as const
 export const customBrandColors = ['magnet'] as const
 export const componentColors = [
   ...brandColors,
