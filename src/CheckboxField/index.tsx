@@ -1,3 +1,3 @@
-import InputField, { InputFieldProps as TInputFieldProps } from './CheckboxField'
-export type InputFieldProps = TInputFieldProps
-export default InputField
+import CheckboxField, { CheckboxFieldProps as TCheckboxFieldProps } from './CheckboxField'
+export type CheckboxFieldProps = TCheckboxFieldProps
+export default CheckboxField

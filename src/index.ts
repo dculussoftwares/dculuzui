@@ -99,6 +99,11 @@ export { default as Checkbox } from './Checkbox'
 import { CheckboxProps as TCheckboxProps } from './Checkbox'
 export type CheckboxProps = TCheckboxProps
 
+// Data Input > CheckboxField
+export { default as CheckboxField } from './CheckboxField'
+import { CheckboxFieldProps as TCheckboxFieldProps } from './CheckboxField'
+export type CheckboxFieldProps = TCheckboxFieldProps
+
 // Data Input > Input
 export { default as Input } from './Input'
 import { InputProps as TInputProps } from './Input'
