@@ -16,6 +16,11 @@ const Template: Story<CheckboxProps> = (args) => {
 export const Default = Template.bind({})
 Default.args = {}
 
+export const DefaultMagnet = Template.bind({})
+DefaultMagnet.args = {
+  value:"Omm"
+}
+
 export const Indeterminate = Template.bind({})
 Indeterminate.args = {
   indeterminate: true,

@@ -21,6 +21,7 @@ export type CheckboxProps = Omit<
     color?: ComponentBrandColors
     size?: ComponentSize
     indeterminate?: boolean
+    marginTop?:number
   }
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
@@ -33,6 +34,8 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       indeterminate,
       dataTheme,
       className,
+      value,
+      marginTop,
       ...props
     },
     ref
@@ -44,6 +47,15 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
         [`checkbox-${size}`]: size,
         [`checkbox-${color}`]: color,
       })
+    )  
+    
+    const baseClasses = twMerge(
+      'flex items-center',
+      clsx({
+        [`mt-${marginTop}`]: marginTop
+      
+      })
+      
     )
 
     const checkboxRef = useRef<HTMLInputElement>(null)
@@ -62,15 +74,19 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     }, [indeterminate])
 
     return (
-      <input
-        {...props}
-        ref={checkboxRef}
-        type="checkbox"
-        checked={checked}
-        defaultChecked={defaultChecked}
-        data-theme={dataTheme}
-        className={classes}
-      />
+      <div className="flex items-center">
+        <input
+          {...props}
+          ref={checkboxRef}
+          type="checkbox"
+          checked={checked}
+          defaultChecked={defaultChecked}
+          data-theme={dataTheme}
+          className={classes}
+        />
+        <p className='ml-2'>{value}</p>
+      </div>
+
     )
   }
 )
