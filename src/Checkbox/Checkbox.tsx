@@ -42,6 +42,8 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   ): JSX.Element => {
     const classes = twMerge(
       'checkbox',
+      'shadow-none',
+      'outline-none',
       className,
       clsx({
         [`checkbox-${size}`]: size,
