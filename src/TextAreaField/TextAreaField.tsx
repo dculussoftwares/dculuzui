@@ -18,7 +18,7 @@ import { ComponentColor, ComponentSize, IComponentBaseProps } from '../types'
 //     hint?: string
 //   }
 
-export type TextareaProps = Omit<
+export type TextAreaFieldProps = Omit<
   React.TextareaHTMLAttributes<HTMLTextAreaElement>,
   'color'
 > &
@@ -33,7 +33,7 @@ export type TextareaProps = Omit<
     hint?: string
   }
 
-const TextAreaField = forwardRef<HTMLInputElement, TextareaProps>(
+const TextAreaField = forwardRef<HTMLInputElement, TextAreaFieldProps>(
   (
     {
       value,
